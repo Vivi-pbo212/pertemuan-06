@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/BangunDatar.php';
+
+class PersegiPanjang extends BangunDatar
+{
+    public function __construct(
+        public float $p,
+        public float $l,
+    ) {
+    }
+
+    public function luas(): float
+    {
+        return $this->p * $this->l;
+    }
+
+    public function keliling(): float
+    {
+        return 2 * ($this->p + $this->l);
+    }
+}
